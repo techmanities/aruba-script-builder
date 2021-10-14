@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aruba Script Builder</title>
+</head>
+
+<body>
+
+    <p>This utility file provides functionality to build common scripts used
+        for the configuration of ports and VLANs for enterprise switches in the
+        HP Enterprise Aruba 2500 series.</p>
+
+    <p>Fill out the inputs fields, and the output text box will contain the
+        appropriate script for copy/pasting into your ssh/Putty terminal window.</p>
+
+    <p>There are no dependencies for this file and no data is transfered out of
+        the browser window. No cookies are stored either.</p>
+
+    <p>Use the configuration tracker fields to easily grab before and after
+        configuration back up files using the file name pattern expansion tool.
+
+    <pre>
+        YYYY - Year
+        MM - Month
+        DD - Day
+        hh - Hour (24 hour)
+        mm - Minutes
+        ss - Seconds
+        ipv4 - ipv4 field formatted ipv4 address with '.' separators
+        ipv4Padded - ipv4 field formatted ipv4 with zero padded numbers and '_' separators
+        deviceName - value provided in the "Device Name" field
+
+        Example: 
+        Template: copy running-config tftp://{ipv4}/Test/{YYYYMMDD}__{ipv4Padded}__PES__Running.txt cli
+          Output: copy running-config tftp://192.168.0.1/Test/20211013__192_168_000_104__PES__Running.txt cli
+    </pre>
+
+    <script>
+        
+    </script>
+</body>
+
+</html>
