@@ -1,0 +1,9 @@
+When you do something for the first time, take notes and when finished quickly make a rough HOWTO document.
+
+The second time you have to do a process, follow your rough notes and flesh out any details you may have missed.
+
+The third time, ask someone who is not familiar with the process to follow your instructions. Invaluable feedback from fresh sets of eyes.
+
+Fourth time, automate the process with code.
+
+Fith time, press a button and watch your time investment pay dividends.
