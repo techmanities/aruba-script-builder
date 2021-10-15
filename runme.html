@@ -46,7 +46,7 @@
     <p>Use the configuration tracker fields to easily grab before and after
         configuration back up files using the file name pattern expansion tool.
 
-    <pre>
+    <pre> 
         YYYY - Year
         MM - Month
         DD - Day
@@ -60,6 +60,7 @@
 
         Example: 
         Template: copy running-config tftp://{ipv4}/Test/{YYYYMMDD}__{ipv4Padded}__PES__Running.txt cli
+          
           Output: copy running-config tftp://192.168.0.1/Test/20211013__192_168_000_104__PES__Running.txt cli
     </pre>
     <input type="text" placeholder="Enter text" onblur="getVal()">
