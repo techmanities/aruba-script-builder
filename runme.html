@@ -6,6 +6,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aruba Script Builder</title>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            body {
+                color: #eee;
+                background: #121212;
+            }
+
+            a {
+                color: #2d397f;
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            body {
+                color: #eee;
+                background: #8995d6;
+            }
+
+            a {
+                color: #2d397f;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -38,9 +61,24 @@
         Template: copy running-config tftp://{ipv4}/Test/{YYYYMMDD}__{ipv4Padded}__PES__Running.txt cli
           Output: copy running-config tftp://192.168.0.1/Test/20211013__192_168_000_104__PES__Running.txt cli
     </pre>
+    <input type="text" placeholder="Enter text" onblur="getVal()">
+    <button onclick="buildText()">Go!</button>
 
     <script>
-        
+        var inputName = document.getElementById('input-name');
+        var inputMessage = document.getElementById('input-message');
+
+        inputName.onkeyup = function () {
+            document.getElementById('reflect-name').innerHTML = inputName.value;
+        }
+        inputMessage.onkeyup = function () {
+            document.getElementById('reflect-message').innerHTML = inputMessage.value;
+        }
+
+        function getVal() {
+            const val = document.querySelector('input').value;
+            console.log(val);
+        }
     </script>
 </body>
 
